@@ -1,8 +1,60 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
+
 
 const SkillTree = () => {
   const [activeNode, setActiveNode] = useState(null);
   const [cameraPosition, setCameraPosition] = useState({ x: 0, y: 0, scale: 1 });
+  const [blizzardMode, setBlizzardMode] = useState(false);
+  const [init, setInit] = useState(false);
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+      setInit(true);
+    });
+  }, []);
+
+
+  const particlesInit = useCallback(async (engine) => {
+    await loadSlim(engine);
+  }, []);
+
+  const particlesOptions = {
+    particles: {
+      number: {
+        value: blizzardMode ? 200 : 80,
+        density: {
+          enable: true,
+          value_area: 800
+        }
+      },
+      color: { value: "#ffffff" },
+      opacity: {
+        value: 0.7,
+        random: true,
+        animation: {
+          enable: blizzardMode,
+          speed: 0.5,
+          minimumValue: 0.1,
+          sync: false
+        }
+      },
+      size: {
+        value: { min: 1, max: 3 },
+        random: true
+      },
+      move: {
+        enable: true,
+        speed: blizzardMode ? { min: 5, max: 10 } : { min: 1, max: 3 },
+        direction: blizzardMode ? "bottom-right" : "bottom",
+        outModes: "out",
+        random: true,
+        straight: false
+      }
+    }
+  };
 
   // Configuración de nodos
   const nodes = [
@@ -53,14 +105,19 @@ const SkillTree = () => {
     }
   ];
 
+  // Al hacer clic en un nodo
   const handleNodeClick = (node) => {
     setActiveNode(node);
-    // Calcular nueva posición de cámara para centrar el nodo
+    setBlizzardMode(true); // Activa ventisca
+
     setCameraPosition({
       x: -node.x,
       y: -node.y,
       scale: 1.5
     });
+    // Desactiva después de 3 segundos
+    setTimeout(() => setBlizzardMode(false), 3000);
+
   };
 
   const resetView = () => {
@@ -91,6 +148,16 @@ const SkillTree = () => {
 
   return (
     <div className="skill-tree-container">
+      {init && <Particles id="tsparticles" options={particlesOptions} />}
+
+      {/* Partículas de fondo */}
+      <Particles
+        id="tsparticles"
+        init={particlesInit}
+        options={particlesOptions}
+      />
+
+
       {/* Controles */}
       <div className="controls">
         <button onClick={resetView} className="reset-btn">
@@ -461,6 +528,13 @@ const SkillTree = () => {
           color: #e8c070;
           padding: 8px 25px;
           margin-top: 15px;
+        }
+
+        #tsparticles {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: 0; /* Asegúrate que esté detrás de tu contenido */
         }
       `}</style>
     </div>
