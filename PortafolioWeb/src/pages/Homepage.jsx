@@ -1,14 +1,14 @@
 // src/pages/HomePage.jsx
 import FrostpunkButton from '../components/FrostpunkButton';
 import MenuBackground from '../components/MenuBackground';
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom'; // Añade useNavigate
+import { Link, useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
-    const navigate = useNavigate(); // Obtén la función de navegación 
+    const navigate = useNavigate();
 
     const menuItems = [
-        { text: "ÁRBOL DE HABILIDADES", disabled: false },
+        { text: "ÁRBOL DE HABILIDADES", disabled: false, route: "/skilltree" },
+        { text: "BIOGRAFÍA", disabled: false, route: "/biography" }, // Nueva opción
         { text: "EXPEDICIONES", disabled: true },
         { text: "ARCHIVOS", disabled: true },
         { text: "CONFIGURACIÓN", disabled: true },
@@ -17,11 +17,8 @@ const HomePage = () => {
     ];
 
     const handleMenuClick = (item) => {
-        if (!item.disabled) {
-        if (item.text === "ÁRBOL DE HABILIDADES") {
-            navigate('/skilltree'); // Navega programáticamente
-        }
-        // Puedes añadir más rutas aquí para otros botones
+        if (!item.disabled && item.route) {
+            navigate(item.route);
         }
     };
 

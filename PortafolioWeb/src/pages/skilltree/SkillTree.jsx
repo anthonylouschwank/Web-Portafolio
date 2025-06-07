@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState } from 'react';
 import './SkillTree.css';
 import { skillTreeNodes, animationConfig } from './SkillTreeData';
