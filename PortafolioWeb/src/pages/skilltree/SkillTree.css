@@ -206,14 +206,14 @@
   z-index: 1;
 }
 
+/* CONEXIONES ESTABLES - Sin animación de pulso */
 .connection-path {
-  opacity: 0.6;
-  animation: pulse 3s ease-in-out infinite alternate;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
 }
 
-@keyframes pulse {
-  0% { opacity: 0.4; }
-  100% { opacity: 0.8; }
+.connection-path:hover {
+  opacity: 1;
 }
 
 /* ===== ANIMACIONES DE GRIETAS ===== */
