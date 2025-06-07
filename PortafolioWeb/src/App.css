@@ -51,3 +51,20 @@ html {
   margin: 0;
   padding: 0;
 }
+
+.tsparticles-canvas {
+  transition: 
+    filter 1.5s ease-in-out,
+    opacity 1.5s ease-in-out;
+}
+
+.blizzard-mode {
+  filter: blur(1px) brightness(1.2);
+  animation: windShake 0.5s linear infinite;
+}
+
+@keyframes windShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  75% { transform: translateX(2px); }
+}
