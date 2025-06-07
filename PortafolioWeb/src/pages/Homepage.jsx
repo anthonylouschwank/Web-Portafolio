@@ -8,12 +8,9 @@ const HomePage = () => {
 
     const menuItems = [
         { text: "ÁRBOL DE HABILIDADES", disabled: false, route: "/skilltree" },
-        { text: "BIOGRAFÍA", disabled: false, route: "/biography" }, // Nueva opción
-        { text: "EXPEDICIONES", disabled: true },
-        { text: "ARCHIVOS", disabled: true },
-        { text: "CONFIGURACIÓN", disabled: true },
-        { text: "CRÉDITOS", disabled: true },
-        { text: "SALIR", disabled: true }
+        { text: "BIOGRAFÍA", disabled: false, route: "/biography" },
+        { text: "PROYECTOS", disabled: false, route: "/projects" },
+        { text: "CRÉDITOS", disabled: false, route: "/credits" }, // Activada
     ];
 
     const handleMenuClick = (item) => {
