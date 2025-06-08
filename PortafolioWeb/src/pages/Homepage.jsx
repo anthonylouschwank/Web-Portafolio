@@ -63,15 +63,17 @@ const HomePage = () => {
         .content-wrapper {
           width: 100%;
           display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 0 8rem;
+          justify-content: center;  
+          align-items: center;      
+          padding: 0 4rem;         
           position: relative;
           z-index: 1;
+          gap: 6rem;               
         }
 
         .title-section {
-          flex: 1;
+          flex: none;              
+          text-align: left;        
         }
 
         .main-title {
@@ -98,12 +100,12 @@ const HomePage = () => {
         }
 
         .menu-section {
-          flex: 1;
+          flex: none;             
           display: flex;
           flex-direction: column;
-          align-items: flex-end;
+          align-items: flex-start; 
           gap: 1rem;
-          padding-left: 4rem;
+          padding-left: 0;         
         }
 
         .frostpunk-btn {
@@ -245,8 +247,9 @@ const HomePage = () => {
         <MenuBackground />
         <div className="title-section">
           <h1 className="main-title">PORTAFOLIO</h1>
-          <h2 className="main-title" style={{fontSize: '3rem', marginTop: '-1rem'}}>INDUSTRIAL</h2>
+          <h2 className="main-title" style={{fontSize: '3rem', marginTop: '-1rem'}}>LABORAL</h2>
           <p className="subtitle">EXPERIENCIA • HABILIDADES • PROYECTOS</p>
+          <p className="subtitle">Anthony Lou Schwank</p>
         </div>
 
         <div className="menu-section">
