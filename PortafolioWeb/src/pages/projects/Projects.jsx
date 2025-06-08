@@ -22,31 +22,31 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "PROYECTO INDUSTRIAL #001",
-      subtitle: "Sistema de Gestión Web",
-      description: "Una aplicación web completa desarrollada con React y Node.js para la gestión de procesos industriales. Incluye dashboard interactivo, gestión de usuarios y reportes en tiempo real.",
-      technologies: ["React", "Node.js", "MongoDB", "Express"],
-      githubUrl: "https://github.com/tu-usuario/proyecto-1",
+      title: "Proyecto Desarrolo de IA",
+      subtitle: "Manejo de Machine Learning",
+      description: "Un proyecto diseñado para la aplicacion de tecnicas de Machine Learning cortando el conocimiento de la IA. Con una interfaz amigable, este proyecto permite a los usuarios interactuar con modelos de IA de manera eficiente.",
+      technologies: ["Python", "Css", "ChatGPT", "Express", "Node.js"],
+      githubUrl: "https://github.com/anthonylouschwank/Proyecto-2-IA.git",
       status: "COMPLETADO",
-      year: "2024"
+      year: "2025"
     },
     {
       id: 2,
-      title: "PROYECTO INDUSTRIAL #002",
-      subtitle: "Automatización de Datos",
-      description: "Script de Python para automatización de análisis de datos industriales. Procesamiento de grandes volúmenes de información con visualizaciones dinámicas y alertas automatizadas.",
-      technologies: ["Python", "Pandas", "Matplotlib", "SQLite"],
-      githubUrl: "https://github.com/tu-usuario/proyecto-2",
+      title: "Raices de Vida",
+      subtitle: "Conexiones y Análisis de Datos",
+      description: "Es una herramienta de ayuda para la gestion de datos sobre emergencias y recursos de diferentes comunidades, pensado para ayudar a las organizaciones a tomar decisiones informadas y mejorar la respuesta ante emergencias.",
+      technologies: ["JavaScript", "Node.js", "Express", "PSQL", "Docker"],
+      githubUrl: "https://github.com/Raices-de-Vida/Raices_de_Vida.git",
       status: "EN DESARROLLO",
-      year: "2024"
+      year: "2025"
     },
     {
       id: 3,
-      title: "PROYECTO INDUSTRIAL #003",
-      subtitle: "API de Monitoreo",
-      description: "API RESTful para monitoreo de equipos industriales en tiempo real. Incluye autenticación, logging avanzado y integración con dispositivos IoT para telemetría.",
-      technologies: ["FastAPI", "PostgreSQL", "Docker", "Redis"],
-      githubUrl: "https://github.com/tu-usuario/proyecto-3",
+      title: "Friomania",
+      subtitle: "Aplicación de Comercio Electrónico",
+      description: "Una plataforma de comercio que permite a los usuarios consultar los precios de varios productos, ademas de recibir la informacion de los productos que se encuentran en oferta. Con una interfaz intuitiva, los usuarios pueden navegar fácilmente por las categorías de productos y realizar compras de manera segura.",
+      technologies: ["Prisma", "PostgreSQL", "Docker", "React", "Vue.js"],
+      githubUrl: "https://github.com/Cisco890/Friomania.git",
       status: "PLANIFICADO",
       year: "2025"
     }

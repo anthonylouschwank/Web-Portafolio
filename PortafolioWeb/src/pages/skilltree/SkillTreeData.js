@@ -36,8 +36,8 @@ export const skillTreeNodes = [
     x: -450,
     y: -100,
     size: 50,
-    title: 'UI/UX Design',
-    content: 'Diseño de interfaces intuitivas y experiencias de usuario excepcionales con herramientas modernas.',
+    title: 'Html/CSS/JS',
+    content: 'Fundamentos sólidos en HTML, CSS y JavaScript, incluyendo técnicas modernas de desarrollo web.',
     connections: ['node1'],
     icon: '✨' // Icono de diseño
   },
@@ -57,8 +57,8 @@ export const skillTreeNodes = [
     x: 430,
     y: -250,
     size: 50,
-    title: 'Microservicios',
-    content: 'Arquitectura de microservicios, containerización con Docker y orquestación con Kubernetes.',
+    title: 'Python & Node.js',
+    content: 'Desarrollo de aplicaciones backend con Python y Node.js (Express).',
     connections: ['node2'],
     icon: '🐳' // Icono de Docker/containers
   },
@@ -78,8 +78,8 @@ export const skillTreeNodes = [
     x: -200,
     y: 250,
     size: 60,
-    title: 'DevOps & Cloud',
-    content: 'Implementación, despliegue y gestión de aplicaciones en la nube con herramientas modernas.',
+    title: 'Desarrollo Movil',
+    content: 'Desarrollo de aplicaciones móviles nativas y multiplataforma con tecnologías modernas.',
     connections: ['center'],
     icon: '☁️' // Icono de nube
   },
@@ -88,20 +88,10 @@ export const skillTreeNodes = [
     x: -350,
     y: 350,
     size: 50,
-    title: 'CI/CD Pipelines',
-    content: 'Automatización completa de pipelines de integración y despliegue continuo.',
+    title: 'Kotlin/Swift',
+    content: 'Desarrollo de aplicaciones móviles nativas con Kotlin para Android y Swift para iOS.',
     connections: ['node3'],
     icon: '🔄' // Icono de ciclo
-  },
-  {
-    id: 'node3-2',
-    x: -50,
-    y: 350,
-    size: 50,
-    title: 'Infraestructura',
-    content: 'Gestión de infraestructura como código con Terraform, AWS, y herramientas de monitoreo.',
-    connections: ['node3'],
-    icon: '🏗️' // Icono de construcción
   },
   // RAMA DATA SCIENCE
   {
@@ -119,20 +109,20 @@ export const skillTreeNodes = [
     x: 470,
     y: 320,
     size: 50,
-    title: 'Machine Learning',
-    content: 'Desarrollo de modelos de ML, deep learning y redes neuronales para problemas complejos.',
+    title: 'Herramientas de Desarrollo',
+    content: 'Uso de herramientas como Git y Docker para el desarrollo y despliegue de aplicaciones.',
     connections: ['node4'],
-    icon: '🤖' // Icono de robot/IA
+    icon: '📈' // Icono de robot/IAz
   },
   {
     id: 'node4-2',
     x: 170,
     y: 320,
     size: 50,
-    title: 'Big Data',
-    content: 'Procesamiento y análisis de grandes volúmenes de datos con herramientas como Spark y Hadoop.',
+    title: 'Inteligencia Artificial',
+    content: 'Implementación de modelos de machine learning y deep learning para resolver problemas complejos.',
     connections: ['node4'],
-    icon: '📈' // Icono de datos
+    icon: '🤖' // Icono de datos
   }
 ];
 

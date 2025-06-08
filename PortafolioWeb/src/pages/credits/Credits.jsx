@@ -41,13 +41,13 @@ const Credits = () => {
       category: "INSPIRACIÓN Y SOPORTE",
       people: [
         {
-          name: "Nombre del Mentor/Profesor",
+          name: "Denis Aldana",
           role: "Mentor Técnico",
-          description: "Orientación en mejores prácticas de desarrollo y arquitectura de software.",
+          description: "Orientación en mejores prácticas de desarrollo y arquitectura de software web.",
           icon: "🎓"
         },
         {
-          name: "Comunidad de Desarrolladores",
+          name: "Comunidad Universitaria",
           role: "Soporte y Feedback",
           description: "Retroalimentación valiosa y sugerencias para mejorar la funcionalidad del portafolio.",
           icon: "👥"
